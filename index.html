@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cumbres Games | Desarrollo de Videojuegos</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<h1 data-lang="titulo">
+CUMBRES GAMES
+</h1>
+
+<p data-lang="eslogan">
+Jugar para aprender. Crear para transformar.
+</p>
+
+</div>
+
+<button class="menu-btn" id="menu-btn">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<nav>
+
+<a href="#inicio" data-lang="nav_inicio">Inicio</a>
+<a href="#nosotros" data-lang="nav_nosotros">Nosotros</a>
+<a href="#mision" data-lang="nav_mision">Misión</a>
+<a href="#juegos" data-lang="nav_juegos">Juegos</a>
+<a href="#feria" data-lang="nav_feria">Feria de Ciencias</a>
+<a href="#galeria" data-lang="nav_galeria">Galería</a>
+<a href="#contacto" data-lang="nav_contacto">Contacto</a>
+<div class="login-selector">
+
+    <button 
+    id="abrirLogin" 
+    class="login-btn"
+    data-lang="login_titulo">
+        Iniciar sesión
+    </button>
+
+
+    <div id="loginMenu" class="login-menu">
+
+
+        <button 
+        id="loginGoogle"
+        data-lang="login_google">
+            Continuar con Google
+        </button>
+
+
+        <hr>
+
+
+        <input
+        id="email"
+        type="email"
+        placeholder="Correo electrónico"
+        data-lang-placeholder="login_correo">
+
+
+        <input
+        id="clave"
+        type="password"
+        placeholder="Contraseña"
+        data-lang-placeholder="login_password">
+
+
+        <button 
+        id="crearCuenta"
+        data-lang="login_crear">
+            Crear cuenta
+        </button>
+
+
+        <button 
+        id="entrarCorreo"
+        data-lang="login_entrar">
+            Iniciar sesión
+        </button>
+
+
+        <button 
+        id="logout"
+        data-lang="login_cerrar">
+            Cerrar sesión
+        </button>
+
+
+        <p id="usuario"></p>
+
+
+    </div>
+
+</div>
+
+<div class="language-selector">
+    <label for="language"></label>
+   <select id="language">
+
+<option value="es">🇦🇷 Español</option>
+<option value="en">🇬🇧 English</option>
+<option value="de">🇩🇪 Deutsch</option>
+<option value="pt">🇵🇹 Português</option>
+<option value="fr">🇫🇷 Français</option>
+
+</select>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<section id="inicio" class="hero">
+
+<div class="hero-content">
+
+<h2 data-lang="bienvenidos">
+Bienvenidos a Cumbres Games
+</h2>
+
+<p data-lang="descripcion_inicio">
+Estudio independiente de videojuegos creado por estudiantes
+de 4.º año de la EPET N.º 1 de La Rioja, Argentina.
+</p>
+
+<a href="#juegos" class="btn" data-lang="boton_juegos">
+🎮 Conocer Juegos
+</a>
+
+</div>
+
+</section>
+
+
+<section id="nosotros">
+
+<h2 data-lang="quienes_somos">
+¿Quiénes Somos?
+</h2>
+
+<div class="contenido">
+
+<div>
+
+<p data-lang="nosotros_texto1">
+<strong>Cumbres Games</strong> es un estudio independiente
+de desarrollo de videojuegos creado por estudiantes de
+<strong>4.º año de la EPET N.º 1 de La Rioja</strong>.
+</p>
+
+
+<p data-lang="nosotros_texto2">
+Nuestro proyecto nació gracias a la participación en la
+<strong>Feria de Ciencias</strong>, donde descubrimos cómo
+la programación, el diseño y la creatividad pueden combinarse
+para crear experiencias interactivas.
+</p>
+
+
+<p data-lang="nosotros_texto3">
+Buscamos demostrar que desde la escuela también es posible
+crear tecnología, desarrollar videojuegos y transformar ideas
+en proyectos reales.
+</p>
+
+</div>
+
+<img src="ChatGPT Image 20 jul 2026, 21_51_56.png" alt="Equipo Cumbres Games">
+
+</div>
+
+</section>
+
+<section id="estadisticas">
+
+<h2 data-lang="estadisticas_titulo">
+Nuestro Impacto
+</h2>
+
+<div class="stats-container">
+
+
+<div class="stat-card">
+
+<i class="fa-solid fa-gamepad"></i>
+
+<h3 class="contador" data-numero="4">0</h3>
+
+<p data-lang="juegos_creados">
+Videojuegos desarrollados
+</p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3 class="contador" data-numero="1">0</h3>
+
+<p data-lang="ferias_participadas">
+Feria de Ciencias
+</p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<i class="fa-solid fa-code"></i>
+
+<h3 class="contador" data-numero="5">0</h3>
+
+<p data-lang="tecnologias">
+Tecnologías utilizadas
+</p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3 data-lang="equipo_titulo">
+Equipo
+</h3>
+
+<p data-lang="equipo_estudiantes">
+Estudiantes de Informática
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+<section id="historia">
+
+<h2 data-lang="historia_titulo">
+Nuestra Historia
+</h2>
+
+
+<p data-lang="historia_texto1">
+Cumbres Games comenzó como un proyecto educativo dentro de
+la especialidad Informática de la EPET N.º 1.
+</p>
+
+
+<p data-lang="historia_texto2">
+A través del aprendizaje de programación, diseño y nuevas
+herramientas digitales comenzamos a desarrollar videojuegos
+con objetivos educativos y sociales.
+</p>
+
+
+<p data-lang="historia_texto3">
+La Feria de Ciencias fue el espacio donde pudimos presentar
+nuestro trabajo, compartir nuestras ideas y demostrar el
+potencial de los estudiantes riojanos.
+</p>
+
+
+</section>
+
+
+<section id="mision">
+
+<h2 data-lang="mision_vision">
+Misión y Visión
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3 data-lang="mision_titulo">
+Misión
+</h3>
+
+
+<p data-lang="mision_texto">
+Crear videojuegos innovadores que mezclen entretenimiento,
+educación y tecnología, generando experiencias que inspiren
+a aprender.
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+<h3 data-lang="vision_titulo">
+Visión
+</h3>
+
+
+<p data-lang="vision_texto">
+Convertirnos en un referente estudiantil en desarrollo de
+videojuegos, demostrando que la creatividad y la tecnología
+pueden transformar ideas en realidad.
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="valores">
+
+<h2 data-lang="valores_titulo">
+Nuestros Valores
+</h2>
+
+
+<div class="servicios-grid">
+
+
+<div class="servicio" data-lang="valor_innovacion">
+Innovación
+</div>
+
+
+<div class="servicio" data-lang="valor_creatividad">
+Creatividad
+</div>
+
+
+<div class="servicio" data-lang="valor_educacion">
+Educación
+</div>
+
+
+<div class="servicio" data-lang="valor_equipo">
+Trabajo en equipo
+</div>
+
+
+<div class="servicio" data-lang="valor_tecnologia">
+Tecnología
+</div>
+
+
+<div class="servicio" data-lang="valor_impacto">
+Impacto Social
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="equipo">
+
+<h2 data-lang="equipo_titulo">
+Nuestro Equipo
+</h2>
+
+
+<div class="contenido">
+
+<p data-lang="equipo_texto">
+Somos estudiantes apasionados por la informática,
+la programación y el desarrollo tecnológico.
+
+Trabajamos en conjunto para diseñar videojuegos,
+crear soluciones digitales y representar a nuestra
+institución en la Feria de Ciencias.
+</p>
+
+
+</div>
+
+
+</section>
+
+<section class="games-banner">
+
+<h2 data-lang="mundos_digitales">
+Explorá nuestros mundos digitales
+</h2>
+
+<p data-lang="mundos_descripcion">
+Videojuegos creados con creatividad, programación
+y tecnología desde La Rioja, Argentina.
+</p>
+
+</section>
+
+<section id="juegos">
+
+<h2 data-lang="juegos_titulo">
+Nuestros Videojuegos
+</h2>
+
+<div class="productos-grid">
+
+<div class="producto-card">
+
+<img src="HOSPITAL.png">
+
+<h2 data-lang="somnium_titulo">
+Somnium:
+El Despertar de las Pesadillas
+</h2>
+
+<p data-lang="somnium_descripcion">
+Videojuego 3D de aventura y misterio donde el jugador
+explora un mundo lleno de desafíos y secretos.
+</p>
+
+<a href="somnium.html"
+class="btn-comprar">
+    Ver juego
+</a>
+
+<div class="valoracion" data-juego="somnium">
+
+    <p data-lang="califica_juego">
+        Califica este juego
+    </p>
+
+    <div class="estrellas">
+        <span data-valor="1">★</span>
+        <span data-valor="2">★</span>
+        <span data-valor="3">★</span>
+        <span data-valor="4">★</span>
+        <span data-valor="5">★</span>
+    </div>
+
+    <small>
+        ⭐ <span class="promedio">0</span>/5
+    </small>
+
+    <p class="mensaje-login"></p>
+
+</div>
+
+</div>
+
+<div class="producto-card">
+
+<img src="ChatGPT Image 9 jul 2026, 23_26_41.png">
+
+<h2 data-lang="conectando_titulo">
+Conectando La Rioja
+</h2>
+
+<p data-lang="conectando_descripcion">
+Una aventura tecnológica donde un técnico recorre
+La Rioja instalando internet en escuelas rurales.
+</p>
+
+<a href="conectando.html"
+class="btn-comprar">
+    Ver juego
+</a>
+
+<div class="valoracion" data-juego="Conectando">
+
+    <p data-lang="califica_juego">
+        Califica este juego
+    </p>
+
+    <div class="estrellas">
+        <span data-valor="1">★</span>
+        <span data-valor="2">★</span>
+        <span data-valor="3">★</span>
+        <span data-valor="4">★</span>
+        <span data-valor="5">★</span>
+    </div>
+
+    <small>
+        ⭐ <span class="promedio">0</span>/5
+    </small>
+
+    <p class="mensaje-login"></p>
+
+</div>
+
+</div>
+
+<div class="producto-card">
+
+<img src="ChatGPT Image 22 jun 2026, 04_33_55 p.m..png">
+
+<h2 data-lang="escuela404_titulo">
+Escuela 404
+</h2>
+
+<p data-lang="escuela404_descripcion">
+Videojuego educativo que combina tecnología,
+aprendizaje y desafíos interactivos.
+</p>
+
+<a href="escuela404.html"
+class="btn-comprar">
+    Ver juego
+</a>
+
+<div class="valoracion" data-juego="escuela">
+
+    <p data-lang="califica_juego">
+        Califica este juego
+    </p>
+
+    <div class="estrellas">
+        <span data-valor="1">★</span>
+        <span data-valor="2">★</span>
+        <span data-valor="3">★</span>
+        <span data-valor="4">★</span>
+        <span data-valor="5">★</span>
+    </div>
+
+    <small>
+        ⭐ <span class="promedio">0</span>/5
+    </small>
+
+    <p class="mensaje-login"></p>
+
+</div>
+
+</div>
+
+<div class="producto-card">
+
+<img src="ChatGPT Image 22 jun 2026, 14_56_22.png">
+
+<h2 data-lang="codigos_titulo">
+Códigos del Olvido
+</h2>
+
+<p data-lang="codigos_descripcion">
+Juego educativo sobre la memoria riojana. Sos un hacker ético que debe recuperar archivos históricos borrados de los servidores de la provincia. Cada nivel es un servidor con un firewall diferente.
+</p>
+
+<a href="codigosdeolvido.html"
+class="btn-comprar">
+    Ver juego
+</a>
+
+
+<div class="valoracion" data-juego="codigos">
+
+    <p data-lang="califica_juego">
+        Califica este juego
+    </p>
+
+    <div class="estrellas">
+        <span data-valor="1">★</span>
+        <span data-valor="2">★</span>
+        <span data-valor="3">★</span>
+        <span data-valor="4">★</span>
+        <span data-valor="5">★</span>
+    </div>
+
+    <small>
+        ⭐ <span class="promedio">0</span>/5
+    </small>
+
+    <p class="mensaje-login"></p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="encuesta">
+
+<h2 data-lang="opinion_comunidad">
+Opinión de la comunidad
+</h2>
+
+
+<div class="formulario-google">
+
+<iframe 
+src="https://docs.google.com/forms/d/e/1FAIpQLScPOcHDUj35bCB1ASaXyvET6OPy6mcYI7fOf2XzPE3RHTi3vg/viewform?usp=header"
+width="100%"
+height="900"
+frameborder="0">
+</iframe>
+
+</div>
+
+
+</section>
+
+
+<section id="feria" class="feria">
+
+<h2 data-lang="feria_titulo">
+Feria de Ciencias
+</h2>
+
+<div class="contenido">
+
+<div>
+
+<p data-lang="feria_texto1">
+Cumbres Games nació y creció gracias a nuestra participación
+en la Feria de Ciencias, un espacio donde los estudiantes
+pueden presentar proyectos innovadores.
+</p>
+
+<p data-lang="feria_texto2">
+Nuestro proyecto "Sinfonía Artificial: Arte, Código y Gestión detrás de un Desarrollo STEAM" busca demostrar cómo la tecnología y la creatividad pueden combinarse para crear videojuegos educativos.
+</p>
+
+<p data-lang="feria_texto3">
+Luego de superar la instancia departamental, logramos avanzar
+a la etapa provincial representando a nuestra institución.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="etapas">
+
+<h2 data-lang="recorrido_titulo">
+Nuestro Recorrido
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3 data-lang="escolar_titulo">
+Instancia Escolar
+</h3>
+
+<p data-lang="escolar_texto">
+Presentación inicial del proyecto dentro de la EPET N.º 1,
+donde desarrollamos la idea y mostramos nuestros avances.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 data-lang="departamental_titulo">
+Instancia Departamental
+</h3>
+
+<p data-lang="departamental_texto">
+Participamos presentando nuestro videojuego ante evaluadores
+y logramos avanzar a la siguiente etapa.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 data-lang="provincial_titulo">
+Instancia Provincial
+</h3>
+
+<p data-lang="provincial_texto">
+Representamos nuestro proyecto en la Feria Provincial de Ciencias mostrando nuestro trabajo tecnológico.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="tecnologias">
+
+<h2 data-lang="tecnologias_titulo">
+Tecnologías utilizadas
+</h2>
+
+<div class="servicios-grid">
+
+<div class="servicio" data-lang="html">
+HTML
+</div>
+
+<div class="servicio" data-lang="css">
+CSS
+</div>
+
+<div class="servicio" data-lang="javascript">
+JavaScript
+</div>
+
+<div class="servicio" data-lang="canva">
+Canva
+</div>
+
+<div class="servicio" data-lang="gamedev">
+Desarrollo de videojuegos
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="galeria">
+
+<h2 data-lang="galeria_titulo">
+Galería
+</h2>
+
+<div class="galeria">
+
+<img src="ChatGPT Image 22 jun 2026, 05_29_39 p.m..png">
+
+<img src="ChatGPT Image 22 jun 2026, 04_33_55 p.m..png">
+
+<img src="ChatGPT Image 9 jul 2026, 23_26_41.png">
+
+<img src="ChatGPT Image 20 jun 2026, 21_54_37.png">
+
+<img src="ChatGPT Image 22 jun 2026, 14_56_22.png">
+
+<img src="PORTADA.png">
+
+<img src="PYE 2.png">
+
+<img src="Orfanato.png">
+
+<img src="HOSPITAL.png">
+
+<img src="Nucleo orinico.png">
+
+
+</div>
+
+</section>
+
+
+
+<section id="impacto">
+
+<h2 data-lang="impacto_titulo">
+Impacto del Proyecto
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3 data-lang="educacion_titulo">
+Educación
+</h3>
+
+<p data-lang="educacion_texto">
+Utilizamos videojuegos como herramientas para aprender
+de una forma interactiva.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 data-lang="innovacion_titulo">
+Innovación
+</h3>
+
+<p data-lang="innovacion_texto">
+Demostramos que desde la escuela se pueden crear
+proyectos tecnológicos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 data-lang="comunidad_titulo">
+Comunidad
+</h3>
+
+<p data-lang="comunidad_texto">
+Buscamos inspirar a otros estudiantes a desarrollar
+sus propias ideas.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="estadistica-visitas">
+    <div class="visitas-glow"></div>
+
+    <div class="visitas-contenido">
+
+        <div class="icono-visitas">
+            <i class="fa-solid fa-eye"></i>
+        </div>
+
+        <p class="titulo-visitas" data-lang="visitas_titulo">
+            Comunidad Cumbres Games
+        </p>
+
+        <div class="contador-numero">
+            <span id="contador-visitas">0</span>
+        </div>
+
+        <p class="texto-visitas" data-lang="visitas_texto">
+            visitas
+        </p>
+
+    </div>
+</div>
+
+<section id="contacto">
+
+<h2 data-lang="contacto_titulo">
+Contacto
+</h2>
+
+<form id="form-contacto">
+
+<input
+type="text"
+name="nombre"
+placeholder="Nombre"
+required>
+
+
+<input
+type="email"
+name="correo"
+placeholder="Correo electrónico"
+required>
+
+
+<textarea
+name="mensaje"
+placeholder="Escribí tu mensaje"
+required>
+</textarea>
+
+
+<button
+type="submit"
+data-lang="enviar_mensaje">
+
+Enviar mensaje
+
+</button>
+
+
+</form>
+
+<section id="contacto-info">
+
+<h2 data-lang="contacto_titulo">
+Información de contacto
+</h2>
+
+<div class="contact-container">
+
+
+<div class="contact-card">
+
+<div class="icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
+
+<h3 data-lang="gmail">
+Correo electrónico
+</h3>
+
+<p>
+cumbregamesoficial@gmail.com
+</p>
+
+<a 
+href="https://mail.google.com/mail/?view=cm&fs=1&to=cumbregamesoficial@gmail.com"
+target="_blank"
+data-lang="enviar_correo">
+
+Enviar correo
+
+</a>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="icon">
+<i class="fa-brands fa-instagram"></i>
+</div>
+
+<h3 data-lang="instagram">
+Instagram
+</h3>
+
+<p>
+@cumbregamesoficial
+</p>
+
+<a 
+href="https://www.instagram.com/cumbregamesoficial/"
+target="_blank"
+rel="noopener noreferrer"
+data-lang="visitar_perfil">
+
+Visitar perfil
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div class="icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+
+<h3 data-lang="ubicacion">
+Ubicación
+</h3>
+
+<p data-lang="ubicacion_texto">
+La Rioja, Argentina
+</p>
+
+<span data-lang="institucion">
+EPET N.º 1
+</span>
+
+</div>
+
+
+</div>
+
+<button id="volverArriba">
+<i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<div class="contact-message">
+
+<h3 data-lang="contacto_pregunta">
+¿Querés conocer nuestro proyecto?
+</h3>
+
+<p data-lang="contacto_descripcion">
+Contactanos para conocer nuestros videojuegos,
+colaboraciones y próximos desarrollos.
+</p>
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+<h3 data-lang="footer_titulo">
+Cumbres Games
+</h3>
+
+<p data-lang="footer_eslogan">
+Jugar para aprender. Crear para transformar.
+</p>
+
+<p data-lang="footer_copy">
+© 2026 Cumbres Games - EPET N.º 1 La Rioja
+</p>
+
+</footer>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+
+</html>

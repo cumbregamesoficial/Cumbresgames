@@ -1,0 +1,970 @@
+/* =====================================
+   ESCUELA 404
+   CUMBRES GAMES
+   ESTILO TIERRA + VERDE
+===================================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+:root{
+
+    --verde:#5fa85f;
+
+    --verde-claro:#8bd17c;
+
+    --tierra:#8b5a2b;
+
+    --marron:#3b2414;
+
+    --fondo:#10150f;
+
+    --panel:#182018;
+
+}
+
+
+
+
+
+body{
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    background:
+
+    radial-gradient(
+    circle at top,
+    #31452d,
+    #10150f 65%
+    );
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+ HEADER
+========================== */
+
+
+header{
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(20,25,16,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:
+
+    1px solid rgba(139,90,43,.3);
+
+}
+
+
+
+.logo h1{
+
+    color:#8bd17c;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.logo p{
+
+    color:#c8c8b8;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:#8bd17c;
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ HERO
+========================== */
+
+
+.hero-juego{
+
+    min-height:85vh;
+
+    padding:80px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+
+
+
+.hero-info{
+
+    max-width:650px;
+
+}
+
+
+
+
+.volver{
+
+    color:#8bd17c;
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+
+.volver:hover{
+
+    color:white;
+
+    transform:translateX(-5px);
+
+}
+
+
+
+
+
+
+
+.categoria{
+
+    color:#8bd17c;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+
+
+
+.hero-info h1{
+
+    font-size:80px;
+
+    letter-spacing:5px;
+
+    background:
+
+    linear-gradient(
+    90deg,#ffffff,#8bd17c,#b47b42
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+
+
+
+
+.hero-info h2{
+
+    color:#ded7c8;
+
+    font-size:32px;
+
+    font-weight:400;
+
+    margin:20px 0;
+
+}
+
+
+
+
+
+
+
+.descripcion-corta{
+
+    color:#d2d0c5;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ ESTRELLAS
+========================== */
+
+
+.rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.estrellas{
+
+    color:#ffd700;
+
+    font-size:28px;
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ BOTÓN JUGAR
+========================== */
+
+
+.btn-jugar{
+
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 45px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #5fa85f,
+    #8b5a2b
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-jugar:hover{
+
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 20px 40px rgba(95,168,95,.3);
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ PORTADA
+========================== */
+
+
+.hero-portada img{
+
+
+    width:450px;
+
+    max-width:100%;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.7);
+
+
+    border:
+
+    3px solid rgba(139,90,43,.4);
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.hero-portada img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ GALERIA
+========================== */
+
+
+.galeria,
+.informacion,
+.reseñas,
+.otros-juegos{
+
+
+    padding:70px 8%;
+
+
+}
+
+
+
+
+
+.galeria h2,
+.informacion h2,
+.reseñas h2,
+.otros-juegos h2{
+
+
+    font-size:35px;
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+
+.visor{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.visor img{
+
+
+    width:80%;
+
+    max-width:900px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+
+    border:
+
+    2px solid rgba(95,168,95,.3);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+
+
+
+.visor button{
+
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+
+    background:#5fa85f;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+
+}
+
+
+
+.visor button:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+
+
+
+
+
+.puntos{
+
+
+    text-align:center;
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+.puntos span{
+
+
+    display:inline-block;
+
+    width:12px;
+
+    height:12px;
+
+
+    background:#777;
+
+    border-radius:50%;
+
+    margin:5px;
+
+
+}
+
+
+
+
+.puntos .activo{
+
+
+    background:#8bd17c;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ INFORMACIÓN
+========================== */
+
+
+.informacion p{
+
+
+    color:#ddd8c8;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+.info-grid{
+
+
+    margin-top:40px;
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.info-card{
+
+
+    background:#182018;
+
+    padding:35px;
+
+    text-align:center;
+
+
+    border-radius:20px;
+
+
+    border:
+
+    1px solid rgba(95,168,95,.2);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.info-card:hover{
+
+
+    transform:translateY(-10px);
+
+
+    background:#223024;
+
+
+}
+
+
+
+
+
+.info-card i{
+
+
+    font-size:40px;
+
+
+    color:#8bd17c;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ RESEÑAS
+========================== */
+
+
+.valoracion-box{
+
+
+    background:#182018;
+
+
+    padding:40px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.estrellas-votar span{
+
+
+    font-size:45px;
+
+
+    color:#555;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.estrellas-votar span.activa,
+
+.estrellas-votar span:hover{
+
+
+    color:#ffd700;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ OTROS JUEGOS
+========================== */
+
+
+
+.cards-juegos{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.cards-juegos a{
+
+
+    padding:40px;
+
+
+    background:#182018;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    border-radius:20px;
+
+
+    text-align:center;
+
+
+    font-size:20px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.cards-juegos a:hover{
+
+
+    background:#5fa85f;
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ FOOTER
+========================== */
+
+
+footer{
+
+
+    background:#0b0e0a;
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    color:#aaa;
+
+
+}
+
+
+
+
+footer h3{
+
+
+    color:#8bd17c;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ CELULAR
+========================== */
+
+
+@media(max-width:900px){
+
+
+
+header{
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.hero-juego{
+
+
+    flex-direction:column-reverse;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.hero-info h1{
+
+
+    font-size:50px;
+
+
+}
+
+
+
+
+
+.visor img{
+
+
+    height:250px;
+
+
+}
+
+
+
+.visor button{
+
+
+    width:45px;
+
+    height:45px;
+
+
+}
+
+
+
+}

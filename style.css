@@ -1,0 +1,5200 @@
+/* ==========================================================
+   CUMBRES GAMES V2
+   PARTE 1 - BASE + HEADER
+   ========================================================== */
+
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+
+    --bg:#060814;
+    --bg2:#0c1225;
+    --surface:#10192e;
+    --surface2:#182341;
+
+    --primary:#00d9ff;
+    --secondary:#7b2cff;
+    --accent:#00ffc8;
+
+    --white:#ffffff;
+    --text:#dce4ff;
+    --text2:#9ca8c7;
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:22px;
+
+    --shadow:
+    0 20px 50px rgba(0,0,0,.45);
+
+    --glow:
+    0 0 40px rgba(0,217,255,.35);
+
+}
+
+
+/* =========================
+RESET
+========================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--white);
+
+    background:var(--bg);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+    position:relative;
+
+}
+
+
+/* =========================
+FONDO
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(0,217,255,.18),
+    transparent 30%),
+
+
+    radial-gradient(circle at 85% 10%,
+    rgba(123,44,255,.18),
+    transparent 28%),
+
+
+    radial-gradient(circle at 60% 90%,
+    rgba(0,255,200,.10),
+    transparent 35%);
+
+    z-index:-2;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.015) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.015) 1px,
+        transparent 1px
+    );
+
+    background-size:60px 60px;
+
+    z-index:-1;
+
+}
+
+
+/* =========================
+SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#05070f;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+
+    var(--primary),
+
+    var(--secondary)
+
+    );
+
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:
+
+    linear-gradient(
+
+    var(--accent),
+
+    var(--primary)
+
+    );
+
+}
+
+
+/* =========================
+SELECCIÓN
+========================= */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#000;
+
+}
+
+/* =========================
+SELECTOR DE IDIOMAS MEJORADO
+========================= */
+
+.language-selector select{
+
+    background:#11182d;
+
+    color:white;
+
+    border:1px solid #00eaff;
+
+    padding:10px 15px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+.language-selector select:hover{
+
+    box-shadow:
+
+    0 0 20px rgba(0,234,255,.5);
+
+    border-color:#7b2cff;
+
+}
+
+
+
+/* Opciones del menú desplegable */
+
+.language-selector option{
+
+    background:#11182d;
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+
+/* ==========================================================
+   NAVBAR CUMBRES GAMES
+========================================================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+
+    padding:0 5%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+
+    z-index:9999;
+
+    background:rgba(6,8,20,.82);
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.07);
+
+    transition:.3s ease;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.logo h1{
+    font-size:24px;
+    font-weight:900;
+
+    letter-spacing:1.5px;
+
+    line-height:1;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--primary),
+        #4f8cff,
+        var(--secondary)
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    text-shadow:
+    0 0 18px rgba(0,217,255,.25);
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.logo h1{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    line-height:1.1;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        #4f8cff,
+        var(--secondary)
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+
+    text-shadow:0 0 18px rgba(0,217,255,.25);
+}
+
+.logo p{
+    display:block;
+
+    margin-top:5px;
+
+    color:var(--text2);
+
+    font-size:11px;
+
+    line-height:1.3;
+
+    letter-spacing:.5px;
+
+    max-width:230px;
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:24px;
+
+    flex:1;
+}
+
+nav a{
+    position:relative;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+    padding:10px 0;
+
+    transition:.3s ease;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:100%;
+    height:2px;
+    background:linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius:10px;
+}
+
+nav a:hover{
+    color:white;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+
+/* =========================
+   LOGIN + IDIOMA
+========================= */
+
+.login-selector,
+.language-selector{
+    flex-shrink:0;
+}
+
+.login-btn{
+    border:none;
+
+    padding:11px 20px;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-weight:700;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2454c6,
+        #315fe0
+    );
+
+    box-shadow:
+    0 8px 25px rgba(49,95,224,.25);
+
+    transition:.3s ease;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 10px 30px rgba(0,217,255,.3);
+}
+
+
+/* =========================
+   SELECTOR DE IDIOMA
+========================= */
+
+.language-selector select{
+    background:rgba(255,255,255,.04);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    font-family:inherit;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    outline:none;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.language-selector select:hover{
+    border-color:rgba(0,217,255,.5);
+
+    box-shadow:
+    0 0 18px rgba(0,217,255,.15);
+}
+
+.language-selector option{
+    background:#11182d;
+    color:white;
+}
+
+
+/* =========================
+   BOTÓN MENÚ
+========================= */
+
+.menu-btn{
+    display:none;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    header{
+        padding:0 3%;
+        gap:18px;
+    }
+
+    nav{
+        gap:16px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .login-btn{
+        padding:10px 14px;
+    }
+
+    .language-selector select{
+        padding:9px 10px;
+    }
+}
+
+
+@media(max-width:900px){
+
+    header{
+        height:72px;
+
+        padding:0 6%;
+    }
+
+    .logo h1{
+        font-size:21px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .login-selector,
+    .language-selector{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+        margin-left:auto;
+    }
+}
+
+/* ==========================================================
+   HERO PROFESIONAL
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    padding:140px 8% 80px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        rgba(6,8,20,.72),
+        rgba(6,8,20,.92)
+    ),
+
+    url("eslogan.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+/* Oscurece ligeramente la imagen */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 20% 20%,
+    rgba(0,217,255,.25),
+    transparent 35%),
+
+    radial-gradient(circle at 80% 15%,
+    rgba(123,44,255,.22),
+    transparent 30%),
+
+    radial-gradient(circle at 50% 90%,
+    rgba(0,255,200,.12),
+    transparent 45%);
+
+    animation:fondoHero 10s ease-in-out infinite alternate;
+
+}
+
+
+/* Línea brillante */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(0,217,255,.08),
+    transparent 70%);
+
+    filter:blur(40px);
+
+    animation:flotarHero 8s ease-in-out infinite;
+
+}
+
+
+/* Contenido */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:900px;
+
+}
+
+
+/* Título */
+
+.hero h2{
+
+    font-size:clamp(45px,7vw,82px);
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    color:white;
+
+    text-shadow:
+
+    0 0 25px rgba(0,217,255,.35);
+
+}
+
+
+/* Descripción */
+
+.hero p{
+
+    max-width:780px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    color:#d7def7;
+
+    opacity:.95;
+
+}
+
+
+/* ==========================================================
+   BOTÓN PREMIUM
+========================================================== */
+
+.btn{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    overflow:hidden;
+
+    margin-top:45px;
+
+    padding:18px 42px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+
+    0 12px 35px rgba(0,217,255,.28);
+
+    transition:.35s;
+
+}
+
+
+/* Reflejo */
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120px;
+
+    top:0;
+
+    width:70px;
+
+    height:100%;
+
+    background:
+
+    rgba(255,255,255,.35);
+
+    transform:skewX(-25deg);
+
+}
+
+
+/* Animación automática */
+
+.btn:hover::before{
+
+    animation:shine .8s;
+
+}
+
+
+/* Hover */
+
+.btn:hover{
+
+    transform:
+
+    translateY(-6px)
+
+    scale(1.04);
+
+    box-shadow:
+
+    0 18px 45px rgba(0,217,255,.45);
+
+}
+
+
+/* Click */
+
+.btn:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* ==========================================================
+   EFECTO GLASS HERO
+========================================================== */
+
+.hero-content{
+
+    background:
+
+    rgba(255,255,255,.04);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    padding:55px;
+
+    border-radius:35px;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.45);
+
+}
+
+
+/* ==========================================================
+   ANIMACIONES
+========================================================== */
+
+@keyframes shine{
+
+    from{
+
+        left:-120px;
+
+    }
+
+    to{
+
+        left:130%;
+
+    }
+
+}
+
+
+@keyframes flotarHero{
+
+    from{
+
+        transform:
+
+        translateY(-20px)
+
+        translateX(-40px);
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(30px)
+
+        translateX(60px);
+
+    }
+
+}
+
+
+@keyframes fondoHero{
+
+    from{
+
+        filter:blur(0px);
+
+    }
+
+    to{
+
+        filter:blur(10px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   ENTRADA HERO
+========================================================== */
+
+.hero h2{
+
+    animation:
+
+    aparecerTitulo
+
+    1s ease;
+
+}
+
+
+.hero p{
+
+    animation:
+
+    aparecerTexto
+
+    1.3s ease;
+
+}
+
+
+.btn{
+
+    animation:
+
+    aparecerBoton
+
+    1.6s ease;
+
+}
+
+
+@keyframes aparecerTitulo{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+@keyframes aparecerTexto{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+@keyframes aparecerBoton{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE HERO
+========================================================== */
+
+@media(max-width:900px){
+
+.hero{
+
+padding-top:170px;
+
+}
+
+.hero-content{
+
+padding:35px;
+
+}
+
+.hero h2{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.btn{
+
+padding:16px 34px;
+
+}
+
+}
+
+/* ==========================================================
+   CUMBRES GAMES V2
+   PARTE 2 - SECCIONES, CARDS Y JUEGOS
+========================================================== */
+
+
+/* =========================
+SECCIONES
+========================= */
+
+section{
+
+    position:relative;
+
+    padding:120px 8%;
+
+}
+
+
+section h2{
+
+    font-size:clamp(34px,5vw,55px);
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+    font-weight:800;
+
+    color:white;
+
+    position:relative;
+
+}
+
+
+section h2::after{
+
+    content:"";
+
+    width:120px;
+
+    height:5px;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    display:block;
+
+    margin:18px auto 0;
+
+}
+
+
+/* =========================
+GRID
+========================= */
+
+.cards,
+.productos-grid,
+.servicios-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:40px;
+
+}
+
+
+/* =========================
+CARDS
+========================= */
+
+.card,
+.producto-card,
+.servicio{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    padding:28px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(18,26,48,.92),
+        rgba(10,15,30,.94)
+    );
+
+    backdrop-filter:blur(20px);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.45);
+
+}
+
+
+/* Brillo superior */
+
+.card::before,
+.producto-card::before,
+.servicio::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:30px;
+
+    padding:2px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(0,217,255,.8),
+        rgba(123,44,255,.7),
+        transparent
+    );
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+
+/* Glow */
+
+.card::after,
+.producto-card::after,
+.servicio::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(0,217,255,.18),
+    transparent 70%);
+
+    top:-70px;
+
+    right:-70px;
+
+    transition:.5s;
+
+}
+
+
+/* Hover */
+
+.card:hover,
+.producto-card:hover,
+.servicio:hover{
+
+    transform:
+
+    translateY(-12px)
+
+    rotateX(2deg);
+
+    border-color:
+
+    rgba(0,217,255,.35);
+
+    box-shadow:
+
+    0 25px 70px rgba(0,217,255,.18);
+
+}
+
+
+.card:hover::before,
+.producto-card:hover::before,
+.servicio:hover::before{
+
+    opacity:1;
+
+}
+
+
+.card:hover::after,
+.producto-card:hover::after,
+.servicio:hover::after{
+
+    transform:scale(1.4);
+
+}
+
+
+/* =========================
+IMÁGENES
+========================= */
+
+.producto-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    transition:.5s;
+
+}
+
+
+.producto-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* =========================
+TÍTULOS
+========================= */
+
+.producto-card h2{
+
+    margin-top:24px;
+
+    margin-bottom:16px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+
+.card h3,
+.servicio h3{
+
+    color:white;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+
+/* =========================
+TEXTOS
+========================= */
+
+.producto-card p,
+.card p,
+.servicio p{
+
+    color:var(--text);
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================
+BOTÓN JUGAR
+========================= */
+
+.btn-comprar{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:28px;
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:700;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.35s;
+
+}
+
+
+.btn-comprar:hover{
+
+    transform:
+
+    translateY(-5px);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,217,255,.35);
+
+}
+
+
+/* =========================
+GALERÍA
+========================= */
+
+.galeria{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+
+.galeria img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    transition:.45s;
+
+    cursor:pointer;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+.galeria img:hover{
+
+    transform:
+
+    scale(1.06)
+
+    rotate(.5deg);
+
+}
+
+
+/* =========================
+CONTENIDO
+========================= */
+
+.contenido{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+.contenido img{
+
+    width:45%;
+
+    border-radius:28px;
+
+    transition:.5s;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,217,255,.15);
+
+}
+
+
+.contenido img:hover{
+
+    transform:
+
+    scale(1.03);
+
+}
+
+
+.contenido div{
+
+    flex:1;
+
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.cards,
+.productos-grid,
+.servicios-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contenido{
+
+flex-direction:column;
+
+}
+
+.contenido img{
+
+width:100%;
+
+}
+
+.producto-card img{
+
+height:210px;
+
+}
+
+}
+
+/* ==========================================================
+   CUMBRES GAMES V2
+   PARTE 3A - ESTADÍSTICAS Y VISITAS
+========================================================== */
+
+
+/* =========================
+ESTADÍSTICAS
+========================= */
+
+.stats-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(270px,1fr));
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+
+.stat-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px 30px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(18,28,50,.96),
+        rgba(10,15,30,.95)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.45);
+
+}
+
+
+/* Luz superior */
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-90px;
+
+    right:-90px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(0,217,255,.22),
+    transparent 70%);
+
+    transition:.5s;
+
+}
+
+
+/* Línea inferior */
+
+.stat-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+
+/* Hover */
+
+.stat-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+    box-shadow:
+
+    0 28px 70px rgba(0,217,255,.18);
+
+}
+
+
+.stat-card:hover::before{
+
+    transform:scale(1.3);
+
+}
+
+
+/* Icono */
+
+.stat-card i{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:36px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+
+    0 0 35px rgba(0,217,255,.35);
+
+}
+
+
+/* Número */
+
+.stat-card h3{
+
+    margin:28px 0 12px;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+
+/* Texto */
+
+.stat-card p{
+
+    color:var(--text);
+
+    font-size:17px;
+
+}
+
+
+
+/* ==========================================================
+   CONTADOR DE VISITAS
+========================================================== */
+
+.estadistica-visitas{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:min(420px,95%);
+
+    margin:90px auto;
+
+    padding:3px;
+
+    border-radius:32px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary),
+        var(--accent)
+    );
+
+    animation:bordeGlow 6s linear infinite;
+
+}
+
+
+/* Glow */
+
+.visitas-glow{
+
+    position:absolute;
+
+    inset:-20px;
+
+    filter:blur(35px);
+
+    opacity:.45;
+
+}
+
+
+/* Contenido */
+
+.visitas-contenido{
+
+    position:relative;
+
+    z-index:2;
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(15,23,42,.97),
+        rgba(8,12,24,.98)
+    );
+
+}
+
+
+/* Icono */
+
+.icono-visitas{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:38px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+
+    0 0 40px rgba(0,217,255,.45);
+
+}
+
+
+/* Título */
+
+.titulo-visitas{
+
+    margin-top:24px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+
+/* Número */
+
+.contador-numero{
+
+    margin-top:25px;
+
+}
+
+
+.contador-numero span{
+
+    font-size:72px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+/* Texto */
+
+.texto-visitas{
+
+    margin-top:10px;
+
+    color:var(--text2);
+
+    font-size:18px;
+
+}
+
+
+/* ==========================================================
+   BANNER
+========================================================== */
+
+.games-banner{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin:80px auto;
+
+    padding:70px 50px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(0,217,255,.08),
+        rgba(123,44,255,.12)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+.games-banner h2{
+
+    margin-bottom:20px;
+
+}
+
+
+.games-banner p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text);
+
+}
+
+
+/* ==========================================================
+   ANIMACIONES
+========================================================== */
+
+@keyframes bordeGlow{
+
+    0%{
+
+        filter:hue-rotate(0deg);
+
+    }
+
+    100%{
+
+        filter:hue-rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+.stat-card{
+
+padding:35px 25px;
+
+}
+
+.stat-card h3{
+
+font-size:42px;
+
+}
+
+.icono-visitas{
+
+width:75px;
+
+height:75px;
+
+font-size:30px;
+
+}
+
+.contador-numero span{
+
+font-size:56px;
+
+}
+
+.games-banner{
+
+padding:50px 30px;
+
+}
+
+}
+
+/* ==========================================================
+   CUMBRES GAMES V2
+   PARTE 3B - ESTRELLAS Y RESEÑAS
+========================================================== */
+
+
+/* =========================
+VALORACIÓN
+========================= */
+
+.valoracion{
+
+    margin-top:28px;
+
+    padding:25px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(18,28,50,.95),
+        rgba(10,15,30,.95)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+.valoracion p{
+
+    text-align:center;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+}
+
+
+/* =========================
+ESTRELLAS
+========================= */
+
+.estrellas{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.estrellas span{
+
+    font-size:38px;
+
+    color:#586178;
+
+    cursor:pointer;
+
+    transition:
+    transform .25s,
+    color .25s,
+    text-shadow .25s;
+
+    user-select:none;
+
+}
+
+
+.estrellas span:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.18);
+
+}
+
+
+/* Hover */
+
+.estrellas span.hover{
+
+    color:#FFD54A;
+
+    text-shadow:
+
+    0 0 10px #FFD54A,
+
+    0 0 20px #FFD54A;
+
+}
+
+
+/* Activa */
+
+.estrellas span.activa{
+
+    color:#FFD700;
+
+    text-shadow:
+
+    0 0 12px #FFD700,
+
+    0 0 28px rgba(255,215,0,.8);
+
+}
+
+
+/* Promedio */
+
+.valoracion small{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+RESEÑAS
+========================================================== */
+
+.reseñas{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(18,28,50,.95),
+        rgba(10,15,30,.95)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+}
+
+
+.reseñas h4{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+    color:white;
+
+}
+
+
+/* Caja */
+
+.texto-reseña{
+
+    width:100%;
+
+    min-height:120px;
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    resize:vertical;
+
+    border-radius:18px;
+
+    background:#0f1728;
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+
+.texto-reseña:focus{
+
+    border:1px solid var(--primary);
+
+    box-shadow:
+
+    0 0 18px rgba(0,217,255,.25);
+
+}
+
+
+/* Botón */
+
+.btn-reseña{
+
+    width:100%;
+
+    margin-top:16px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.3s;
+
+}
+
+
+.btn-reseña:hover{
+
+    transform:
+
+    translateY(-3px);
+
+    box-shadow:
+
+    0 12px 30px rgba(0,217,255,.30);
+
+}
+
+
+/* Lista */
+
+.lista-reseñas{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin-top:25px;
+
+}
+
+
+/* Tarjeta */
+
+.resena{
+
+    position:relative;
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+
+    border-left:5px solid var(--primary);
+
+    transition:.3s;
+
+    animation:entradaResena .45s ease;
+
+}
+
+
+.resena:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+/* Texto */
+
+.resena p{
+
+    color:white;
+
+    line-height:1.7;
+
+    margin-bottom:10px;
+
+}
+
+
+/* Fecha */
+
+.resena small{
+
+    color:#9ca8c7;
+
+    font-size:13px;
+
+}
+
+
+/* ==========================================================
+SCROLL
+========================================================== */
+
+.lista-reseñas{
+
+    max-height:350px;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+}
+
+
+.lista-reseñas::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+.lista-reseñas::-webkit-scrollbar-thumb{
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+
+/* ==========================================================
+ANIMACIÓN
+========================================================== */
+
+@keyframes entradaResena{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+.estrellas span{
+
+font-size:32px;
+
+}
+
+.valoracion{
+
+padding:20px;
+
+}
+
+.reseñas{
+
+padding:20px;
+
+}
+
+}
+
+/* ==========================================================
+   CUMBRES GAMES V2
+   PARTE 3C - EFECTOS PREMIUM
+========================================================== */
+
+
+/* =========================
+ANIMACIÓN GENERAL
+========================= */
+
+section{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+TRANSICIONES
+========================= */
+
+a,
+button,
+.card,
+.producto-card,
+.servicio,
+.stat-card,
+.contact-card,
+.galeria img{
+
+    transition:all .35s ease;
+
+}
+
+
+/* =========================
+IMÁGENES
+========================= */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+.producto-card img{
+
+    border:2px solid rgba(255,255,255,.08);
+
+}
+
+
+.producto-card:hover img{
+
+    border-color:rgba(0,217,255,.35);
+
+}
+
+
+/* =========================
+TÍTULOS
+========================= */
+
+h1,
+h2,
+h3{
+
+    letter-spacing:.5px;
+
+}
+
+
+/* =========================
+PÁRRAFOS
+========================= */
+
+p{
+
+    color:var(--text);
+
+}
+
+
+/* =========================
+SEPARADORES
+========================= */
+
+section::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:2px;
+
+    margin:80px auto 0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,217,255,.5),
+        transparent
+    );
+
+}
+
+
+/* =========================
+FOCUS
+========================= */
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    box-shadow:
+
+    0 0 0 3px rgba(0,217,255,.25);
+
+}
+
+
+/* =========================
+HOVER LINKS
+========================= */
+
+a{
+
+    transition:color .3s ease;
+
+}
+
+
+a:hover{
+
+    color:var(--primary);
+
+}
+
+
+/* =========================
+EFECTO GLASS GLOBAL
+========================= */
+
+.valoracion,
+.reseñas,
+.contact-message,
+.games-banner{
+
+    backdrop-filter:blur(14px);
+
+}
+
+
+/* =========================
+SOMBRA SUAVE
+========================= */
+
+.producto-card,
+.card,
+.servicio,
+.stat-card{
+
+    box-shadow:
+
+    0 12px 35px rgba(0,0,0,.28);
+
+}
+
+
+/* =========================
+RESPONSIVE GENERAL
+========================= */
+
+@media(max-width:900px){
+
+section{
+
+padding:90px 6%;
+
+}
+
+section h2{
+
+font-size:34px;
+
+}
+
+}
+
+/* ==========================================================
+   CUMBRES GAMES V2
+   PARTE 4 - CONTACTO, FOOTER Y RESPONSIVE
+========================================================== */
+
+
+/* =========================
+CONTACTO
+========================= */
+
+#contacto{
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #060814,
+        #0c1225
+    );
+
+    overflow:hidden;
+
+}
+
+
+#contacto::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(0,217,255,.12),
+        transparent 70%
+    );
+
+    top:-250px;
+    right:-180px;
+
+    pointer-events:none;
+
+}
+
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* =========================
+CARDS CONTACTO
+========================= */
+
+.contact-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px 30px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(17,26,48,.95),
+        rgba(8,13,29,.96)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.35);
+
+}
+
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        transparent,
+        rgba(255,255,255,.05),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+
+.contact-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,217,255,.18);
+
+}
+
+
+.contact-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+/* =========================
+ICONO
+========================= */
+
+.contact-card .icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto auto 25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    font-size:38px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+
+    0 0 35px rgba(0,217,255,.35);
+
+}
+
+
+/* =========================
+TEXTOS
+========================= */
+
+.contact-card h3{
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:15px;
+
+}
+
+
+.contact-card p{
+
+    color:var(--text);
+
+    margin-bottom:25px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================
+BOTÓN
+========================= */
+
+.contact-card a{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px 30px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:700;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.35s;
+
+}
+
+
+.contact-card a:hover{
+
+    transform:
+
+    translateY(-4px);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,217,255,.28);
+
+}
+
+
+/* =========================
+MENSAJE FINAL
+========================= */
+
+.contact-message{
+
+    margin:70px auto 0;
+
+    max-width:850px;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+}
+
+
+.contact-message h3{
+
+    font-size:34px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+
+.contact-message p{
+
+    color:var(--text);
+
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+    margin-top:80px;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #04060d,
+        #02040a
+    );
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+
+footer p{
+
+    color:#98a5c4;
+
+    font-size:15px;
+
+}
+
+
+/* =========================
+VOLVER ARRIBA
+========================= */
+
+#volverArriba{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    color:white;
+
+    font-size:24px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+
+    0 0 30px rgba(0,217,255,.35);
+
+    transition:.35s;
+
+}
+
+
+#volverArriba:hover{
+
+    transform:
+
+    scale(1.12)
+    rotate(360deg);
+
+}
+
+
+/* =========================
+RESPONSIVE FINAL
+========================= */
+
+@media(max-width:900px){
+
+header{
+
+    padding:18px 6%;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+
+.logo h1{
+
+    font-size:28px;
+
+}
+
+
+.hero{
+
+    padding:150px 6% 90px;
+
+}
+
+
+.hero h2{
+
+    font-size:42px;
+
+}
+
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.contact-card{
+
+    padding:35px 25px;
+
+}
+
+
+.contact-message{
+
+    padding:30px;
+
+}
+
+
+#volverArriba{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:20px;
+
+}
+
+}
+
+
+/* =========================
+ANIMACIÓN FINAL
+========================= */
+
+@keyframes flotar{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+.icon,
+.icono-visitas{
+
+    animation:flotar 4s ease-in-out infinite;
+
+}
+
+nav a.activo{
+
+    color:#00eaff;
+
+    text-shadow:
+    0 0 15px #00eaff;
+
+}
+
+
+nav a.activo::after{
+
+    width:100%;
+
+}
+
+nav a{
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    height:3px;
+
+    width:0;
+
+    border-radius:10px;
+
+
+    background:
+    linear-gradient(
+        90deg,
+        #00eaff,
+        #7b2cff
+    );
+
+
+    transition:.4s;
+
+}
+
+
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+nav a:hover{
+
+    color:#00eaff;
+
+    text-shadow:
+    0 0 15px #00eaff;
+
+}
+
+
+#contacto{
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #070b18,
+        #0d1630
+    );
+
+}
+
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+
+.contact-card{
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border:
+
+    1px solid rgba(0,234,255,.2);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.contact-card:hover{
+
+    transform:translateY(-12px);
+
+
+    border-color:#00eaff;
+
+
+    box-shadow:
+
+    0 0 35px rgba(0,234,255,.35);
+
+}
+
+
+
+.contact-card .icon{
+
+    width:85px;
+
+    height:85px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    border-radius:50%;
+
+
+    font-size:38px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #00eaff,
+        #7b2cff
+    );
+
+
+    box-shadow:
+
+    0 0 30px rgba(0,234,255,.5);
+
+}
+
+
+
+.contact-card h3{
+
+    margin-top:25px;
+
+    color:#00eaff;
+
+    font-size:24px;
+
+}
+
+
+
+.contact-card p{
+
+    color:#d0d7ef;
+
+    margin:15px 0;
+
+}
+
+
+
+.contact-card a{
+
+
+    display:inline-block;
+
+
+    padding:12px 30px;
+
+
+    border-radius:50px;
+
+
+    background:#00eaff;
+
+
+    color:#06101c;
+
+
+    text-decoration:none;
+
+
+    font-weight:700;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.contact-card a:hover{
+
+
+    transform:scale(1.08);
+
+
+    box-shadow:
+
+    0 0 25px #00eaff;
+
+
+}
+
+#contacto-info{
+
+    padding:100px 8%;
+
+    background:
+    linear-gradient(
+        180deg,
+        #070b18,
+        #0b1228
+    );
+
+}
+
+/* =========================
+CONTACTO ORDENADO
+========================= */
+
+
+#contacto{
+
+    padding:100px 8%;
+
+}
+
+
+
+.formulario-contacto{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+
+
+#contacto form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+#contacto input,
+#contacto textarea{
+
+
+    width:100%;
+
+}
+
+
+
+#contacto-info{
+
+    padding:80px 8%;
+
+}
+
+
+
+.contact-container{
+
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(260px,1fr));
+
+
+    gap:30px;
+
+
+    max-width:1100px;
+
+
+    margin:auto;
+
+
+}
+
+/* =====================================
+   CONTACTO CUMBRES GAMES - DISEÑO FINAL
+===================================== */
+
+
+#contacto,
+#contacto-info{
+
+    background:
+    linear-gradient(
+        180deg,
+        #070b18,
+        #0b1228
+    );
+
+}
+
+
+/* TITULOS */
+
+#contacto h2,
+#contacto-info h2{
+
+    text-align:center;
+
+    color:#00eaff;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+    text-shadow:
+
+    0 0 20px rgba(0,234,255,.5);
+
+}
+
+
+
+/* CAJA DEL FORMULARIO */
+
+.formulario-contacto{
+
+    max-width:650px;
+
+    margin:auto;
+
+    padding:40px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:30px;
+
+
+    border:
+
+    1px solid rgba(0,234,255,.2);
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.35);
+
+}
+
+
+
+#contacto input,
+#contacto textarea{
+
+
+    width:100%;
+
+    padding:16px;
+
+
+    border-radius:18px;
+
+
+    background:#11182d;
+
+
+    color:white;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+    outline:none;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+#contacto input:focus,
+#contacto textarea:focus{
+
+
+    border-color:#00eaff;
+
+
+    box-shadow:
+
+    0 0 20px rgba(0,234,255,.3);
+
+}
+
+
+
+#contacto button{
+
+
+    padding:15px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #00eaff,
+
+    #7b2cff
+
+    );
+
+
+    color:white;
+
+
+    font-weight:700;
+
+
+    font-size:16px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+#contacto button:hover{
+
+
+    transform:translateY(-5px);
+
+
+    box-shadow:
+
+    0 0 30px rgba(0,234,255,.5);
+
+}
+
+
+
+
+/* =========================
+   TARJETAS CONTACTO
+========================= */
+
+
+#contacto-info .contact-container{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+    gap:30px;
+
+
+}
+
+
+
+.contact-card{
+
+
+    padding:35px;
+
+
+    min-height:280px;
+
+
+    text-align:center;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #11182d,
+
+    #080c19
+
+    );
+
+
+    border:
+
+    1px solid rgba(0,234,255,.15);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.contact-card:hover{
+
+
+    transform:translateY(-10px);
+
+
+    border-color:#00eaff;
+
+
+    box-shadow:
+
+
+    0 0 35px rgba(0,234,255,.25);
+
+
+}
+
+
+
+.contact-card .icon{
+
+
+    width:80px;
+
+
+    height:80px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border-radius:50%;
+
+
+    font-size:35px;
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #00eaff,
+
+    #7b2cff
+
+    );
+
+
+    color:white;
+
+
+    box-shadow:
+
+    0 0 25px rgba(0,234,255,.5);
+
+
+}
+
+
+
+.contact-card h3{
+
+
+    margin-top:20px;
+
+
+    color:#00eaff;
+
+
+}
+
+
+
+.contact-card a{
+
+
+    display:inline-block;
+
+
+    margin-top:15px;
+
+
+    padding:12px 25px;
+
+
+    border-radius:30px;
+
+
+    background:#00eaff;
+
+
+    color:#06101c;
+
+
+    text-decoration:none;
+
+
+    font-weight:700;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.contact-card a:hover{
+
+
+    transform:scale(1.05);
+
+
+}
+
+.formulario-google{
+
+    max-width:750px;
+
+    margin:auto;
+
+    padding:20px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    border-radius:30px;
+
+
+    border:
+
+    1px solid rgba(0,234,255,.2);
+
+
+    box-shadow:
+
+    0 0 35px rgba(0,234,255,.15);
+
+}
+
+
+
+.formulario-google iframe{
+
+    border-radius:20px;
+
+}
+
+.contact-card{
+    position:relative;
+}
+
+
+.contact-card a{
+    position:relative;
+    z-index:9999;
+    pointer-events:auto;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+CELULAR
+
+*{
+    max-width:100%;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+body{
+    overflow-x:hidden;
+}
+
+
+@media(max-width:600px){
+
+header{
+
+    padding:15px 20px;
+    flex-direction:column;
+
+}
+
+
+nav{
+
+    flex-direction:column;
+    width:100%;
+    text-align:center;
+
+}
+
+
+.hero h2{
+
+    font-size:34px;
+
+}
+
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+
+section{
+
+    padding:60px 20px;
+
+}
+
+
+.contenido{
+
+    flex-direction:column;
+
+}
+
+
+.cards,
+.productos-grid,
+.servicios-grid,
+.stats-container,
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.producto-card,
+.card,
+.servicio,
+.contact-card{
+
+    width:100%;
+
+}
+
+
+.galeria{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* =========================
+   MENU HAMBURGUESA MOBILE
+========================= */
+
+
+.menu-btn{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+
+/* SOLO CELULAR */
+
+@media(max-width:600px){
+
+
+header{
+
+    display:flex;
+
+    flex-direction:row;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.menu-btn{
+
+    display:block;
+
+}
+
+
+
+nav{
+
+    display:none;
+
+    width:100%;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:25px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #11182d,
+        #080c19
+    );
+
+
+    border-radius:25px;
+
+
+    border:1px solid rgba(0,234,255,.2);
+
+
+    box-shadow:
+
+    0 0 25px rgba(0,234,255,.2);
+
+}
+
+
+
+nav.activo{
+
+    display:flex;
+
+}
+
+
+
+nav a{
+
+    font-size:18px;
+
+    text-align:center;
+
+}
+
+
+
+.language-selector{
+
+    display:none;
+
+}
+
+
+
+.language-selector.activo{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+}
+
+/* =================================
+   PASO 3A - ESTILO APP MOBILE
+================================= */
+
+
+/* Movimiento suave de tarjetas */
+
+.card,
+.producto-card,
+.servicio,
+.contact-card,
+.stat-card{
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+}
+
+
+/* Efecto al tocar en celular */
+
+@media(max-width:600px){
+
+
+.card:active,
+.producto-card:active,
+.servicio:active,
+.contact-card:active,
+.stat-card:active{
+
+    transform:scale(.97);
+
+}
+
+
+
+/* HEADER APP */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    background:rgba(7,11,24,.85);
+
+    backdrop-filter:blur(15px);
+
+    z-index:1000;
+
+}
+
+
+
+/* LOGO */
+
+.logo h1{
+
+    font-size:24px;
+
+}
+
+
+
+/* HERO MOBILE */
+
+
+.hero-content{
+
+    animation:
+
+    aparecerMobile .8s ease;
+
+}
+
+
+
+.hero h2{
+
+    line-height:1.2;
+
+}
+
+
+
+/* BOTONES */
+
+
+.btn,
+.btn-comprar,
+.contact-card a{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:14px;
+
+}
+
+
+
+/* TARJETAS */
+
+
+.producto-card,
+.card,
+.contact-card,
+.stat-card{
+
+    border-radius:25px;
+
+}
+
+
+
+/* IMAGENES */
+
+
+.producto-card img,
+.contenido img{
+
+    border-radius:20px;
+
+}
+
+
+
+/* TITULOS */
+
+
+section h2{
+
+    line-height:1.2;
+
+}
+
+
+/* RESEÑAS */
+
+
+.reseñas{
+
+    padding:15px;
+
+}
+
+
+
+.estrellas span{
+
+    font-size:28px;
+
+}
+
+
+/* CONTACTO */
+
+
+.contact-card .icon{
+
+    width:65px;
+
+    height:65px;
+
+}
+
+
+
+/* ANIMACION */
+
+@keyframes aparecerMobile{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+}
+
+/* =================================
+   PASO 3B - JUEGOS ESTILO APP
+================================= */
+
+
+@media(max-width:600px){
+
+
+.productos-grid{
+
+    gap:25px;
+
+}
+
+
+
+.producto-card{
+
+    overflow:hidden;
+
+    padding:20px;
+
+    background:
+
+    linear-gradient(
+        160deg,
+        #111a33,
+        #080c19
+    );
+
+
+    border:1px solid rgba(0,234,255,.2);
+
+}
+
+
+
+/* Imagen del juego */
+
+
+.producto-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* Titulo juego */
+
+
+.producto-card h2{
+
+    font-size:24px;
+
+    text-align:center;
+
+    color:#00eaff;
+
+}
+
+
+
+/* Descripcion */
+
+
+.producto-card p{
+
+    text-align:center;
+
+    color:#c8d0e8;
+
+    font-size:15px;
+
+}
+
+
+
+/* Boton jugar */
+
+
+.btn-comprar{
+
+    display:block;
+
+    margin-top:20px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #00eaff,
+        #7b2cff
+    );
+
+
+    color:white;
+
+    font-weight:700;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-comprar:active{
+
+    transform:scale(.95);
+
+}
+
+
+
+/* Valoracion */
+
+
+.valoracion{
+
+    margin-top:25px;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    border-radius:20px;
+
+    padding:20px;
+
+}
+
+
+
+.valoracion p{
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+
+
+.estrellas{
+
+    margin-top:10px;
+
+}
+
+
+
+.estrellas span{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.estrellas span:active{
+
+    transform:scale(1.3);
+
+}
+
+
+}
+
+/* =================================
+   PASO 3C - IMPACTO APP MOBILE
+================================= */
+
+
+@media(max-width:600px){
+
+
+#estadisticas,
+#impacto,
+#tecnologias{
+
+    padding-top:60px;
+
+}
+
+
+
+/* CONTENEDOR */
+
+.stats-container{
+
+    gap:20px;
+
+}
+
+
+
+/* TARJETAS */
+
+
+.stat-card{
+
+    padding:25px 15px;
+
+    border-radius:25px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111a33,
+        #080c19
+    );
+
+
+}
+
+
+
+/* ICONOS */
+
+
+.stat-card i{
+
+    font-size:35px;
+
+}
+
+
+
+/* NUMEROS */
+
+
+.stat-card h3{
+
+    font-size:40px;
+
+    margin:10px 0;
+
+}
+
+
+
+/* TEXTO */
+
+
+.stat-card p{
+
+    font-size:15px;
+
+}
+
+
+
+/* IMPACTO */
+
+
+#impacto .card{
+
+    text-align:center;
+
+}
+
+
+
+/* TECNOLOGIAS */
+
+
+#tecnologias .servicio{
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+
+/* VISITAS */
+
+
+.estadistica-visitas{
+
+    margin:
+
+    40px auto;
+
+    width:90%;
+
+}
+
+
+.contador-numero span{
+
+    font-size:55px;
+
+}
+
+
+}
+
+/* =================================
+   PASO 4 - FINAL PREMIUM DESIGN
+================================= */
+
+
+/* EFECTO HOVER PROFESIONAL EN CARDS */
+
+.card,
+.producto-card,
+.servicio,
+.contact-card,
+.stat-card{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+}
+
+
+.card:hover,
+.producto-card:hover,
+.servicio:hover,
+.contact-card:hover,
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(0,234,255,.18);
+
+}
+
+
+
+/* TITULOS CON BRILLO */
+
+
+section h2{
+
+    text-shadow:
+
+    0 0 15px rgba(0,234,255,.35);
+
+}
+
+
+
+/* BOTONES MAS PREMIUM */
+
+
+.btn,
+.btn-comprar{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.btn::before,
+.btn-comprar::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+
+    transition:.5s;
+
+}
+
+
+
+.btn:hover::before,
+.btn-comprar:hover::before{
+
+    left:100%;
+
+}
+
+
+
+/* SCROLL SUAVE SECCIONES */
+
+
+section{
+
+    scroll-margin-top:100px;
+
+}
+
+
+
+/* IMAGENES MAS PROFESIONALES */
+
+
+.contenido img,
+.galeria img,
+.producto-card img{
+
+
+    transition:.4s;
+
+
+}
+
+
+.contenido img:hover,
+.galeria img:hover,
+.producto-card img:hover{
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+/* FOOTER MEJORADO */
+
+
+footer{
+
+    border-top:
+
+    1px solid rgba(0,234,255,.15);
+
+
+}
+
+
+
+/* MOBILE FINAL */
+
+
+@media(max-width:600px){
+
+
+.hero h2{
+
+    font-size:32px;
+
+}
+
+
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+
+
+section h2{
+
+    font-size:30px;
+
+}
+
+
+
+.logo h1{
+
+    font-size:25px;
+
+}
+
+
+}
+
+
+.btn-comprar{
+    position:relative;
+    z-index:10;
+    cursor:pointer;
+}
+
+/*==========================
+LOGIN DESPLEGABLE
+==========================*/
+
+.login-selector{
+    position: relative;
+}
+
+.login-btn{
+    background: linear-gradient(135deg,#1e3a8a,#2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 4px 12px rgba(37,99,235,.35);
+}
+
+.login-btn:hover{
+    transform: translateY(-2px);
+    background: linear-gradient(135deg,#2563eb,#3b82f6);
+}
+
+.login-menu{
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 320px;
+    background: rgba(18,24,38,.97);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.45);
+    z-index: 9999;
+}
+
+.login-menu.activo{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: aparecer .25s ease;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.login-menu hr{
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,.12);
+    margin: 4px 0;
+}
+
+.login-menu input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.12);
+    background:#0f172a;
+    color:#fff;
+    outline:none;
+    box-sizing:border-box;
+}
+
+.login-menu input::placeholder{
+    color:#9ca3af;
+}
+
+.login-menu input:focus{
+    border-color:#3b82f6;
+}
+
+#loginGoogle{
+    background:#ffffff;
+    color:#111827;
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#loginGoogle:hover{
+    background:#f3f4f6;
+}
+
+#crearCuenta{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#crearCuenta:hover{
+    background:#1d4ed8;
+}
+
+#entrarCorreo{
+    background:#10b981;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#entrarCorreo:hover{
+    background:#059669;
+}
+
+#logout{
+    background:#ef4444;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#logout:hover{
+    background:#dc2626;
+}
+
+#usuario{
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+    margin-top:5px;
+    word-break: break-word;
+}
+
+
+.fa-location-dot:hover{
+
+    animation: girarPin .8s ease;
+
+}
+
+@keyframes girarPin{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    50%{
+        transform:rotate(25deg) scale(1.2);
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+i.fa-location-dot{
+    display:inline-block;
+    transition:.5s ease;
+}
+
+i.fa-location-dot:hover{
+    animation:giroPin .8s;
+}
+
+
+@keyframes giroPin{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+#volverArriba i{
+    display:inline-block;
+    transition: transform .5s ease;
+}
+
+#volverArriba:hover i{
+    transform: translateY(-5px) rotate(360deg);
+}
+
+.menu-btn{
+    display:block !important;
+    position:relative;
+    z-index:99999;
+}
+
+nav{
+    z-index:99998;
+}
+
+@media(max-width:600px){
+
+.login-selector,
+.language-selector{
+
+    display:block;
+
+}
+
+
+nav.activo .login-selector,
+nav.activo .language-selector{
+
+    animation: aparecer .3s ease;
+
+}
+
+}
+
+@media(max-width:600px){
+
+    nav.activo{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+        width:100%;
+
+    }
+
+
+    nav.activo a,
+    nav.activo .login-selector,
+    nav.activo .language-selector{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+
+    nav.activo .login-btn{
+
+        width:90%;
+
+        margin:auto;
+
+    }
+
+
+    nav.activo select{
+
+        width:90%;
+
+        margin:auto;
+
+    }
+
+}
+/* =================================
+   FIX DEFINITIVO MENU HAMBURGUESA
+================================= */
+
+button.menu-btn{
+    display:none !important;
+}
+
+
+/* SOLO CELULAR */
+
+@media screen and (max-width:600px){
+
+    button.menu-btn{
+        display:block !important;
+    }
+
+}
